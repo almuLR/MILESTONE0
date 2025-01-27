@@ -6,7 +6,7 @@
 /*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:18:57 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/01/27 17:40:36 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/01/27 18:56:12 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ char	*ft_strrchr(const char *s, int c)
 	const char	*l;
 
 	l = NULL;
-	while (*s != '\0')
+	while ( *s != '\0')
 	{
 		if ((unsigned char)*s == (unsigned char)c)
 			l = s;
 		s++;
 	}
 	if ((unsigned char)c == '\0')
-		return ((char *)s);
-	return ((char *)l);
+		return((char *)s);
+	return((char *)l);
 }
