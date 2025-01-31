@@ -6,7 +6,7 @@
 /*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 10:27:44 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/01/31 11:25:36 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/01/31 11:39:06 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static char	*ft_empty_substr(void)
 {
-	char *aux;
+	char	*aux;
 
 	aux = malloc(1);
 	if (aux)
