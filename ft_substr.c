@@ -6,7 +6,7 @@
 /*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 10:27:44 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/01/31 11:39:06 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/01 17:29:48 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
+	if (len == 0)
+		return (ft_empty_substr());
 	size = ft_strlen(s);
 	if (start >= size)
 		return (ft_empty_substr());
