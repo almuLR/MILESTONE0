@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
+/*   By: almlopez <almlopez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:55:59 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/02/01 18:33:47 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/02 17:26:08 by almlopez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_n_words(char const *s, char c)
 {
 	int	n;
 	int	w;
-	int prev;
+	int	prev;
 
 	n = 0;
 	w = 0;
@@ -25,7 +25,7 @@ int	ft_n_words(char const *s, char c)
 	{
 		if (s[n] == c)
 		{
-			prev = 1;	
+			prev = 1;
 		}
 		else if (s[n] != c && prev)
 		{
@@ -37,37 +37,65 @@ int	ft_n_words(char const *s, char c)
 	return (w);
 }
 
-char	**ft_split(char const *s, char c)
+int	ft_get_lenght_word(char const *s, int i, char c)
+{
+	int	j;
+
+	j = 0;
+	while (s[i + j] != c && s[i + j] != '\0')
+		j++;
+	return (j);
+}
+int free_split(char **aux, int n)
+{
+	if (!aux[n])
+	{
+		while (n > 0)
+			free(aux[--n]);
+		free(aux);
+		return (1);
+	}
+	return (0);
+}
+
+char	**ft_allocate_and_split(char const *s, char c, int w)
 {
 	char	**aux;
-	int	w;
-	int i;
-	int	j;
-	int	n;
+	int		i;
+	int		n;
+	int		j;
 
-	if (!s)
-		return (NULL);
-	w = ft_n_words(s, c);
-	if (w == 0)
-		return (NULL);
 	aux = malloc((w + 1) * sizeof(char *));
 	if (!aux)
 		return (NULL);
 	i = 0;
 	n = 0;
-	while (n < w)
+	while (s[i] != '\0')
 	{
-		aux[n] = ft_get_word(s, c, &i);
-		if (!aux[n])
+		if (s[i] == c)
+			i++;
+		else if (s[i] != c && s[i] != '\0')
 		{
-			while (n > 0) // Free en caso de fallo
-				free(aux[--n]);
-			free(aux);
-			return (NULL);
+			j = ft_get_lenght_word(s, i, c);
+			aux[n] = ft_substr(s, i, j);
+			if(free_split(aux, n++))
+				return (NULL);
+			i = i + j;
 		}
-		n++;
 	}
 	aux[n] = NULL;
+	return (aux);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**aux;
+	int		w;
+
+	if (!s)
+		return (NULL);
+	w = ft_n_words(s, c);
+	aux = ft_allocate_and_split(s, c, w);
 	return (aux);
 }
 
