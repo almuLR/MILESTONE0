@@ -6,7 +6,7 @@
 /*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 10:59:35 by almlopez          #+#    #+#             */
-/*   Updated: 2025/02/01 17:44:34 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/01 18:24:02 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@ int		ft_isprint(int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 #endif

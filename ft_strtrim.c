@@ -6,7 +6,7 @@
 /*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 16:30:25 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/02/01 17:47:07 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/01 18:25:12 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!set)
 		return (NULL);
 	i = 0;
-	while (s1[i] != '\0' && ft_is_Set(s1[i], set))
+	while (s1[i] != '\0' && ft_is_set(s1[i], set))
 		i++;
 	j = ft_strlen(s1);
 	if (j == 0 || i == j)
 		return (ft_substr(s1, 0, 0));
 	j--;
-	while (j > i && ft_is_Set(s1[j], set))
+	while (j > i && ft_is_set(s1[j], set))
 		j = j - 1;
 	return (ft_substr(s1, i, j - i + 1));
 }
