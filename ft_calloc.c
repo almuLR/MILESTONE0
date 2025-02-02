@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
+/*   By: almlopez <almlopez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 10:52:51 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/01/30 11:14:54 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/02 15:21:38 by almlopez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_calloc(size_t count, size_t size)
 	aux = malloc(n);
 	if (aux != NULL)
 	{
-		memset(aux, 0, n);
+		ft_memset(aux, 0, n);
 		return (aux);
 	}
 	return (NULL);
