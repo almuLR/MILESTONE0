@@ -6,7 +6,7 @@
 /*   By: almlopez <almlopez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:55:59 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/02/02 17:26:08 by almlopez         ###   ########.fr       */
+/*   Updated: 2025/02/02 20:55:29 by almlopez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ int	ft_get_lenght_word(char const *s, int i, char c)
 		j++;
 	return (j);
 }
-int free_split(char **aux, int n)
+
+int	free_split(char **aux, int n)
 {
 	if (!aux[n])
 	{
@@ -77,8 +78,8 @@ char	**ft_allocate_and_split(char const *s, char c, int w)
 		else if (s[i] != c && s[i] != '\0')
 		{
 			j = ft_get_lenght_word(s, i, c);
-			aux[n] = ft_substr(s, i, j);
-			if(free_split(aux, n++))
+			aux[n] = ft_substr (s, i, j);
+			if (free_split (aux, n++))
 				return (NULL);
 			i = i + j;
 		}
