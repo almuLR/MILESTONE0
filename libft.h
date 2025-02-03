@@ -6,7 +6,7 @@
 /*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 10:59:35 by almlopez          #+#    #+#             */
-/*   Updated: 2025/02/03 12:33:18 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/03 12:53:24 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,5 @@ void	ft_putendl_fd(char *s, int fd);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void *content);
 #endif
