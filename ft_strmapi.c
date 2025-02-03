@@ -1,62 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/02 18:26:55 by almlopez          #+#    #+#             */
-/*   Updated: 2025/02/03 11:00:05 by almudenalop      ###   ########.fr       */
+/*   Created: 2025/02/03 11:06:29 by almudenalop       #+#    #+#             */
+/*   Updated: 2025/02/03 11:15:31 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	size_number(int n)
-{
-	int	l;
-
-	l = 0;
-	if (n < 0)
-	{
-		n *= -1;
-		l++;
-	}
-	if (n == 0)
-		l++;
-	while (n > 0)
-	{
-		n = n / 10;
-		l++;
-	}
-	return (l);
-}
-
-char	*ft_itoa(int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*result;
-	long	aux;
 	int		i;
+	int		n;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	aux = n;
-	i = size_number(n);
-	result = (char *)malloc((i + 1) * sizeof(char));
+	n = ft_strlen(s);
+	result = malloc((n + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
-	result[i--] = '\0';
-	if (aux == 0)
-		result[0] = '0';
-	if (n < 0)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		result[0] = '-';
-		aux *= -1;
+		result[i] = f(i, s[i]);
+		i++;
 	}
-	while (aux > 0)
-	{
-		result[i--] = (aux % 10) + '0';
-		aux = aux / 10;
-	}
+	result[i] = '\0';
 	return (result);
 }
