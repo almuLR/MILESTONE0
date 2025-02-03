@@ -6,7 +6,7 @@
 #    By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/24 11:43:09 by almlopez          #+#    #+#              #
-#    Updated: 2025/02/03 13:39:01 by almudenalop      ###   ########.fr        #
+#    Updated: 2025/02/03 17:35:13 by almudenalop      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_putnbr_fd.c
 OBJS = $(SRCS:.c=.o)
 
-BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
