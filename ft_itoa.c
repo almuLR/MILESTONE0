@@ -3,62 +3,60 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almlopez <almlopez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 18:26:55 by almlopez          #+#    #+#             */
-/*   Updated: 2025/02/02 20:45:50 by almlopez         ###   ########.fr       */
+/*   Updated: 2025/02/03 10:56:37 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	size_number(int n)
+{
+	int	l;
+
+	l = 0;
+	if (n < 0)
+	{
+		n *= -1;
+		l++;
+	}
+	if (n == 0)
+		l++;
+	while (n > 0)
+	{
+		n = n / 10;
+		l++;
+	}
+	return (l);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*result;
-	int		aux;
+	long	aux;
 	int		i;
-	int		neg;
-	int		aux2;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	aux = n;
-	i = 0;
-	neg = 0;
-	if (n == 0)
-		i = 1;
-	if (n == 0)
-    {
-        result = (char *)malloc(2 * sizeof(char));
-        if (!result)
-            return (NULL);
-        result[0] = '0';
-        result[1] = '\0';
-        return (result);
-    }
-	if (n < 0)
-    {
-        neg = 1;
-        if (n == -2147483648)
-            return (ft_strdup("-2147483648"));
-        aux = -n;
-    }
-	aux2 = aux;
-	while (aux2 != 0)
-	{
-		aux2 = aux2 / 10;
-		i++;
-	}
-	result = (char *)malloc((i+ neg + 1) * sizeof(char));
+	i = size_number(n);
+	result = (char *)malloc((i + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
-	result[i + neg] = '\0';
-	aux = n;
-	while (i > 0)
+	result[i--] = '\0';
+	if (aux == 0)
+		result[0] = '0';
+	if (n < 0)
 	{
-		result[i + neg - 1] = (aux % 10) + '0';
-		aux = aux / 10;
-		i--;
+		result[0] = '-';
+		aux *= -1;
 	}
-	if (neg)
-        result[0] = '-';
+	while (aux > 0)
+	{
+		result[i--] = (aux % 10) + '0';
+		aux = aux / 10;
+	}
 	return (result);
 }
