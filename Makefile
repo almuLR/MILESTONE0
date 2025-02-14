@@ -6,7 +6,7 @@
 #    By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/24 11:43:09 by almlopez          #+#    #+#              #
-#    Updated: 2025/02/03 18:26:50 by almudenalop      ###   ########.fr        #
+#    Updated: 2025/02/14 17:35:18 by almudenalop      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ bonus: $(OBJS) $(BONUS_OBJS)
 	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
 
 %.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)

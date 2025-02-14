@@ -6,13 +6,13 @@
 /*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 17:11:19 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/01/26 17:59:10 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/14 17:37:52 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_equals(const char *haystack, const char *needle, size_t i, size_t len)
+static int	is_equals(const char *haystack, const char *needle, size_t i, size_t len)
 {
 	size_t	j;
 

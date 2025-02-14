@@ -6,13 +6,13 @@
 /*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 16:30:25 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/02/01 18:25:12 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/14 17:38:07 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_set(char c, char const *set)
+static int	ft_is_set(char c, char const *set)
 {
 	int	n;
 

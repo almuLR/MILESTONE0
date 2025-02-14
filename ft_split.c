@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almlopez <almlopez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:55:59 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/02/02 20:55:29 by almlopez         ###   ########.fr       */
+/*   Updated: 2025/02/14 17:37:13 by almudenalop      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_n_words(char const *s, char c)
+static int	ft_n_words(char const *s, char c)
 {
 	int	n;
 	int	w;
@@ -37,7 +37,7 @@ int	ft_n_words(char const *s, char c)
 	return (w);
 }
 
-int	ft_get_lenght_word(char const *s, int i, char c)
+static int	ft_get_lenght_word(char const *s, int i, char c)
 {
 	int	j;
 
@@ -47,7 +47,7 @@ int	ft_get_lenght_word(char const *s, int i, char c)
 	return (j);
 }
 
-int	free_split(char **aux, int n)
+static int	free_split(char **aux, int n)
 {
 	if (!aux[n])
 	{
@@ -59,7 +59,7 @@ int	free_split(char **aux, int n)
 	return (0);
 }
 
-char	**ft_allocate_and_split(char const *s, char c, int w)
+static char	**ft_allocate_and_split(char const *s, char c, int w)
 {
 	char	**aux;
 	int		i;
