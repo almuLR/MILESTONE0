@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
+/*   By: almlopez <almlopez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 16:30:25 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/02/14 17:38:07 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/09 11:19:42 by almlopez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

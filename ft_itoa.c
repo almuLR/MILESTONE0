@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
+/*   By: almlopez <almlopez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 18:26:55 by almlopez          #+#    #+#             */
-/*   Updated: 2025/02/14 17:35:54 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/09 11:18:08 by almlopez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

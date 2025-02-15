@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almudenalopezrodriguez <almudenalopezro    +#+  +:+       +#+        */
+/*   By: almlopez <almlopez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:55:59 by almudenalop       #+#    #+#             */
-/*   Updated: 2025/02/14 17:37:13 by almudenalop      ###   ########.fr       */
+/*   Updated: 2025/02/09 11:18:56 by almlopez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
